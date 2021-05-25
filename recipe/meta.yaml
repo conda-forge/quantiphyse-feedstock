@@ -35,7 +35,7 @@ requirements:
     - numpy
     - pandas
     - pillow
-    - pyobjc-framework-cocoa # [osx]
+    - pyobjc-framework-cocoa  # [osx]
     - pyqtgraph >=0.11.1
     - pyside2
     - python
