@@ -20,7 +20,7 @@ build:
 requirements:
   build:
   host:
-    - python >=3.6
+    - python
     - pip
   run:
     - cython
@@ -32,7 +32,7 @@ requirements:
     - pyobjc-framework-cocoa  # [osx]
     - pyqtgraph >=0.11.1
     - pyside2
-    - python >=3.6
+    - python
     - pyyaml
     - requests
     - scikit-image
