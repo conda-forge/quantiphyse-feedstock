@@ -1,7 +1,7 @@
 {% set name = "quantiphyse" %}
 {% set version = "0.9.7.post6" %}
 {% set sha256 = "d33a491252512ec4f234a00dcb673ce88892607a3aa80bfcee9ac668ffde0176" %}
-{% set build = "1" %}
+{% set build = "3" %}
 
 package:
   name: "{{ name|lower }}"
@@ -22,15 +22,9 @@ requirements:
   host:
     - python
     - pip
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
-    - {{ cdt('mesa-dri-drivers') }}  # [linux]
-    - {{ cdt('libselinux') }}  # [linux]
-    - {{ cdt('libxdamage') }}  # [linux]
-    - {{ cdt('libxxf86vm') }}  # [linux]
-    - {{ cdt('libxext') }}     # [linux]
   run:
     - cython
-    - matplotlib
+    - matplotlib-base
     - nibabel
     - numpy
     - pandas
