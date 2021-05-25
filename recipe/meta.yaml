@@ -16,12 +16,12 @@ build:
   entry_points:
     - quantiphyse = quantiphyse.qpmain:main
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
-  noach: python
+  noarch: python
 
 requirements:
   build:
   host:
-    - python >= 3.6
+    - python >=3.6
     - pip
   run:
     - cython
@@ -33,7 +33,7 @@ requirements:
     - pyobjc-framework-cocoa  # [osx]
     - pyqtgraph >=0.11.1
     - pyside2
-    - python >= 3.6
+    - python >=3.6
     - pyyaml
     - requests
     - scikit-image
