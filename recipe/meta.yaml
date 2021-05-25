@@ -16,18 +16,13 @@ build:
   entry_points:
     - quantiphyse = quantiphyse.qpmain:main
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  noach: python
 
 requirements:
   build:
   host:
-    - python
+    - python >= 3.6
     - pip
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
-    - {{ cdt('mesa-dri-drivers') }}  # [linux]
-    - {{ cdt('libselinux') }}  # [linux]
-    - {{ cdt('libxdamage') }}  # [linux]
-    - {{ cdt('libxxf86vm') }}  # [linux]
-    - {{ cdt('libxext') }}     # [linux]
   run:
     - cython
     - matplotlib
@@ -38,7 +33,7 @@ requirements:
     - pyobjc-framework-cocoa  # [osx]
     - pyqtgraph >=0.11.1
     - pyside2
-    - python
+    - python >= 3.6
     - pyyaml
     - requests
     - scikit-image
