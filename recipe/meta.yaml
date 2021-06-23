@@ -1,21 +1,21 @@
 {% set name = "quantiphyse" %}
-{% set version = "0.9.7.post6" %}
-{% set sha256 = "d33a491252512ec4f234a00dcb673ce88892607a3aa80bfcee9ac668ffde0176" %}
-{% set build = "3" %}
+{% set version = "0.9.8.post1" %}
+{% set sha256 = "387797fa6fdb56852bba4c4af3364dbb66954202d18ffde71ae2288acac1472b" %}
+{% set build = 0 %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  
+
 build:
   number: {{ build }}
   entry_points:
     - quantiphyse = quantiphyse.qpmain:main
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   build:
