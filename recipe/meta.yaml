@@ -1,6 +1,6 @@
 {% set name = "quantiphyse" %}
-{% set version = "0.9.8.post1" %}
-{% set sha256 = "387797fa6fdb56852bba4c4af3364dbb66954202d18ffde71ae2288acac1472b" %}
+{% set version = "0.9.9.post1" %}
+{% set sha256 = "5308ef73a788f97f4f8aca58e45d0844116c20a87b134ec0576411c2710f2aa9" %}
 {% set build = 0 %}
 
 package:
